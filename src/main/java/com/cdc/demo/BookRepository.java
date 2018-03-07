@@ -25,4 +25,10 @@ public class BookRepository {
 	public Book findOne(long id) {
 		return bookMap.get(id);
 	}
+
+	public Book update(long id, Book book) {
+		bookMap.put(id, book);
+		book.setId(id);
+		return book;
+	}
 }

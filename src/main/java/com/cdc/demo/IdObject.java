@@ -2,6 +2,10 @@ package com.cdc.demo;
 
 public class IdObject {
 	private long id;
+	
+	public IdObject() {
+		
+	}
 
 	public IdObject(long id) {
 		super();

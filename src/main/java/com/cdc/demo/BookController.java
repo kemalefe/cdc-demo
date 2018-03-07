@@ -22,17 +22,15 @@ public class BookController {
 	}
 
 	@PostMapping("/book-service/books")
-	public ResponseEntity<IdObject> createBook(@RequestBody @Valid Book user) {
-		Book savedBook = this.bookRepository.save(user);
+	public ResponseEntity<IdObject> createBook(@RequestBody  Book book) {
+		Book savedBook = this.bookRepository.save(book);
 		return ResponseEntity.status(201).body(new IdObject(savedBook.getId()));
 	}
 
 	@PutMapping("/book-service/books/{id}")
 	public ResponseEntity<Book> updateBook(@RequestBody @Valid Book book, @PathVariable long id) {
-		Book bookFromDb = bookRepository.findOne(id);
-		bookFromDb.updateFrom(book);
-		bookFromDb = bookRepository.save(bookFromDb);
-		return ResponseEntity.ok(bookFromDb);
+		bookRepository.update(id, book);
+		return ResponseEntity.ok(book);
 	}
 
 	@GetMapping("/book-service/books/{id}")

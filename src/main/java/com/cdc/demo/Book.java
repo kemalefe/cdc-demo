@@ -6,23 +6,17 @@ public class Book {
 	private String name;
 	private String author;
 	private double price;
-	
+
 	public Book() {
-		
+
 	}
-	
+
 	public Book(Long id, String name, String author, double price) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.author = author;
 		this.price = price;
-	}
-
-	public void updateFrom(Book book) {
-		this.author = book.getAuthor();
-		this.name = book.getName();
-		this.price = book.getPrice();
 	}
 
 	public Long getId() {

@@ -13,7 +13,7 @@ Contract.make {
 			id: 3,
 			name: "1984",
 			author: "George Orwell",
-			price: 32.00
+			price: 40.00
 		)
 	}
 
@@ -26,7 +26,7 @@ Contract.make {
 			id: 3,
 			name: "1984",
 			author: "George Orwell",
-			price: 32.00
+			price: 40.00
 		)
 	}
 }

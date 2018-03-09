@@ -34,7 +34,7 @@ public abstract class BaseTestClass {
 		
 		Mockito.when(bookRepository.save(ArgumentMatchers.any())).thenReturn(new Book(2L, "Fi","Azra Kohen", 18.00d));
 		
-		Mockito.when(bookRepository.update(ArgumentMatchers.eq(3L), ArgumentMatchers.any())).thenReturn(new Book(3L, "1984","George Orwell", 32.00d));
+		Mockito.when(bookRepository.update(ArgumentMatchers.eq(3L), ArgumentMatchers.any())).thenReturn(new Book(3L, "1984","George Orwell", 40.00d));
 	}
 
 }

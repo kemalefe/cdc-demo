@@ -32,8 +32,6 @@ public abstract class BaseTestClass {
 		
 		Mockito.when(bookRepository.findOne(1L)).thenReturn(new Book(1L,"Nutuk", "Gazi M.Kemal Atatürk", 20.00d));
 		
-		Mockito.when(bookRepository.save(ArgumentMatchers.any())).thenReturn(new Book(2L, "Fi","Azra Kohen", 18.00d));
-		
 	}
 
 }
